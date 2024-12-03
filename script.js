@@ -6,10 +6,11 @@ function Book(title, author, pages, read) {
     this.pages = pages;
     this.read = read;
     this.info = function() {
-        return title + " by " + author + ". " + pages + " pages. " + "Read: " + read;
+        return this.title + " by " + this.author + ". " + this.pages + " pages. " + "Read: " + this.read;
     };
 }
 
-function addBookToLibrary() {
-    
-}
+function addBookToLibrary(title, author, pages, read) {
+    const newBook = new Book(title, author, pages, read);
+    myLibrary.push(newBook);
+};
