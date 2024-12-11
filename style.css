@@ -1,0 +1,131 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    height: 90%;
+    /* padding: 5px; */
+    grid-template-rows: min(15%, 100px) 3fr;
+}
+
+.library-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+[id*="-button-svg"] {
+    width: 30px;
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+}
+
+form {
+    display: grid;
+    justify-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+#display-area {
+    grid-row: 2/3;
+    width: 98%;
+    height: max(80vh, 70%);
+    background-color: gainsboro;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px 1fr;
+}
+
+input {
+    /* align-self: self-start; */
+    border: none;
+    background-color: rgb(184, 184, 184);
+    color: rgb(74, 48, 31);
+    text-align: center;
+    border-radius: 8px;
+    height: 20px;
+}
+
+#book-title-input,
+#author-input {
+    width: 80%;
+}
+
+.empty-text {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#new-book-button-example {
+    width: 18px;
+    height: auto;
+}
+
+[class*="-header"] {
+    grid-row: 1/2;
+    text-align: center;
+    align-self: center;
+}
+
+.book-title-header {
+    grid-column: 1/2;
+}
+
+.book-author-header {
+    grid-column: 2/3;
+}
+
+.book-pages-header {
+    grid-column: 3/4;
+}
+
+.book-read-header {
+    grid-column: 4/5;
+}
+
+#active-display {
+    grid-row: 2/3;
+    grid-column: 1/5;
+}
+
+.book {
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5px;
+    gap: 10px;
+    text-align: center;
+}
+
+.display-book-title {
+    grid-column: 1/2;
+}
+
+.display-book-author {
+    grid-column: 2/3;
+}
+
+.display-book-pages {
+    grid-column: 3/4;
+}
+
+.display-book-read {
+    grid-column: 4/5;
+}
