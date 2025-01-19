@@ -1,0 +1,351 @@
+@font-face {
+    font-family: 'secondary-regular';
+    src: url('../fonts/islandmoments-regular-webfont.woff2') format('woff2'),
+         url('../fonts/islandmoments-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'prominent-regular';
+    src: url('../fonts/pirataone-regular-webfont.woff2') format('woff2'),
+         url('../fonts/pirataone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'main-regular';
+    src: url('../fonts/jost-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/jost-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: 'main-regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#container {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    height: 90%;
+    grid-template-rows: min(45%, 150px) 1fr;
+}
+
+.library-controls {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#site-name {
+    cursor: pointer;
+    font-family: 'prominent-regular','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a:any-link {
+    text-decoration: none;
+    color: black;
+}
+
+.control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+[id*="-button-svg"] {
+    width: 25px;
+    align-self: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    border-radius: 4px;
+}
+
+#add-button:hover {
+    background-color: rgba(30, 240, 30, 0.645);
+    border-color: rgba(30, 240, 30, 0.645);
+}
+
+#close-button:hover {
+    background-color: rgba(232, 19, 19, 0.645);
+    border-color: rgba(232, 19, 19, 0.645);
+}
+
+#add-new-book-button:hover {
+    background-color: rgba(165, 119, 51, 0.645);
+    border-color: rgba(165, 119, 51, 0.645);
+}
+
+#new-book-button-example:hover {
+    fill: rgba(165, 119, 51, 0.645);
+}
+
+#show-library-button:hover {
+    background-color: rgba(234, 234, 68, 0.645);
+    border-color: rgba(234, 234, 68, 0.645);
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+}
+
+form {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(8, 1fr) 2fr;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    width: 100%;
+    align-items: center;
+}
+
+#display-area {
+    grid-row: 2/4;
+    width: 98%;
+    height: max(80vh, 70%);
+    background-color: gainsboro;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px 1fr 40px;
+}
+
+[class*='-error-output'] {
+    display: none;
+    align-items: center;
+    height: 0;
+}
+
+#alert-svg {
+    height: 20px;
+    align-self: center;
+}
+
+#alert-svg path {
+    fill: red;
+}
+
+input {
+    border: none;
+    background-color: rgb(184, 184, 184);
+    color: rgb(74, 48, 31);
+    text-align: center;
+    border-radius: 8px;
+    height: 20px;
+}
+
+#book-title-input,
+#author-input {
+    width: 100%;
+}
+
+.title-input-label {
+    grid-row: 1/2;
+    grid-column: 2/5;
+}
+
+#book-title-input {
+    grid-row: 2/3;
+    grid-column: 2/5;
+}
+
+.title-error-output {
+    grid-row: 2/3;
+    grid-column: 5/6;
+}
+
+.author-input-label {
+    grid-row: 3/4;
+    grid-column: 2/5;
+}
+
+#author-input {
+    grid-row: 4/5;
+    grid-column: 2/5;
+}
+
+.author-error-output {
+    grid-row: 4/5;
+    grid-column: 5/6;
+}
+
+.pages-input-label {
+    grid-row: 5/6;
+    grid-column: 2/5;
+}
+
+#pages-input {
+    grid-row: 6/7;
+    grid-column: 2/5;
+}
+
+.pages-error-output {
+    grid-row: 6/7;
+    grid-column: 5/6;
+}
+
+.read-input-label {
+    grid-row: 7/8;
+    grid-column: 2/5;
+}
+
+#read-input {
+    grid-row: 8/9;
+    grid-column: 2/5;
+}
+
+#read-input:hover {
+    cursor: pointer;
+}
+
+.form-buttons {
+    grid-row: 9/10;
+    grid-column: 2/5;
+}
+
+.empty-text {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#new-book-button-example {
+    width: 18px;
+    height: auto;
+}
+
+[class*="-header"] {
+    grid-row: 1/2;
+    text-align: center;
+    align-self: center;
+}
+
+.book-title-header {
+    grid-column: 1/2;
+}
+
+.book-author-header {
+    grid-column: 2/3;
+}
+
+.book-pages-header {
+    grid-column: 3/4;
+}
+
+.book-read-header {
+    grid-column: 4/5;
+}
+
+#active-display {
+    grid-row: 2/3;
+    grid-column: 1/5;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.book {
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5px;
+    gap: 10px;
+    text-align: center;
+    background-color: #cacaca66;
+    border-radius: 12px;
+}
+
+.book:hover {
+    cursor: pointer;
+    background-color: #abababaf;
+    border-radius: 14px;
+}
+
+.display-book-title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.display-book-author {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.display-book-pages {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.display-book-read {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+
+.display-book-info {
+    grid-column: 1/5;
+    grid-row: 2/3;
+}
+
+.info {
+    display: flex;
+}
+
+#library-dialog[open] {
+    width: 90%;
+    display: grid;
+    justify-content: center;
+}
+
+.remove-book-button {
+    border: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: center;
+}
+
+#library-close-button {
+    background: none;
+    border: none;
+    margin-top: 10px;
+}
+
+.remove-book-button:hover,
+.remove-book-button-svg:hover,
+#library-close-button:hover,
+#library-close-button-svg:hover {
+    fill: red;
+}
+
+table,
+tr,
+th,
+td {
+    border-collapse: collapse;
+    border: 0.5px solid rgb(134, 134, 134);
+    padding: 6px;
+    text-align: center;
+}
+
+th {
+    background: #c3c2c2af;
+}
